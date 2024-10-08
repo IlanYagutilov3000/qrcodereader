@@ -22,7 +22,7 @@ const QrCode: FunctionComponent<QrCodeProps> = () => {
             <div className="container">
                 <h1>QR Code Generator🔥</h1>
                 <input type="text" placeholder="Type a URL..." value={value} onChange={(e) => setValue(e.target.value)} />
-                <button onClick={generateQrCodeHandler}>Generate QR Code</button>
+                <button onClick={generateQrCodeHandler} className="qrBtn">Generate QR Code</button>
                 {qrVisible && <div className="qr-code-container">
                     <QRCode value={value} size={300} />
                 </div>}
